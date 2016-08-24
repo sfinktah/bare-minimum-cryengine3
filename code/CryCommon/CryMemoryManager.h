@@ -279,9 +279,15 @@ CRYMEMORYMANAGER_API void CryGetIMemoryManagerInterface( void **pIMemoryManager 
 //////////////////////////////////////////////////////////////////////////
 // Cry Memory Manager accessible in all build modes.
 //////////////////////////////////////////////////////////////////////////
+/*
 #if !defined(USING_CRY_MEMORY_MANAGER)
 	#define USING_CRY_MEMORY_MANAGER
 #endif
+#if defined(USING_CRY_MEMORY_MANAGER)
+	#undef USING_CRY_MEMORY_MANAGER
+#define NOT_USE_CRY_MEMORY_MANAGER
+#endif
+*/
 
 #ifndef _LIB
 #define CRY_MEM_USAGE_API extern "C" DLL_EXPORT

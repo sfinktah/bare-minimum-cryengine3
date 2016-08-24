@@ -50,7 +50,7 @@
 #endif
 
 #if defined(_DEBUG) && !defined(PS3) && !defined(LINUX) && !defined(CAFE)
-	#include <crtdbg.h>
+	// #include <crtdbg.h>
 #endif
 
 
@@ -1151,9 +1151,11 @@ enum ETriState
 
 // Include MultiThreading support.
 #ifndef __SPU__ 
-#  include "CryThread.h"
+// sfink
+// #  include "CryThread.h"
 #endif
-#include "MultiThread.h"
+// sfink
+// #include "MultiThread.h"
 
 	//////////////////////////////////////////////////////////////////////////
 	// Facilities for collecting options in a struct, and quickly constructing them.
@@ -1218,3 +1220,4 @@ enum ETriState
 #endif
 
 #endif // _PLATFORM_H_
+/* vim: set ts=2 sts=0 sw=4 noet: */

@@ -1,3 +1,8 @@
+
+#ifndef __IFLOWSYSTEM_H__
+#define __IFLOWSYSTEM_H__
+#endif
+
 #include DEVIRTUALIZE_HEADER_FIX(IFlowSystem.h)
 
 #ifndef __IFLOWSYSTEM_H__

@@ -13,6 +13,10 @@
 *************************************************************************/
 #ifndef __GAME_H__
 #define __GAME_H__
+#endif
+
+#ifndef __GAME_H__
+#define __GAME_H__
 
 #if _MSC_VER > 1000
 # pragma once

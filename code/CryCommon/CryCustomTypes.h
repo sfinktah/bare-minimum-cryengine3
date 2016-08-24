@@ -290,6 +290,7 @@ template<class T> struct TIntTraits
 	static const T nMIN
 		= bSIGNED ? T (T(1) << T(sizeof(T)*8-1)) : T(0);
 
+#pragma warning( disable : 4245 )
 	static const T nMAX
 		= ~nMIN;
 };

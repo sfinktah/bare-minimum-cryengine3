@@ -324,13 +324,17 @@ struct STexAnim
 	}
   void Release()
   {
-    long refCnt = CryInterlockedDecrement(&m_nRefCount);
+	// sfink
+    // long refCnt = CryInterlockedDecrement(&m_nRefCount);
+	  long refCnt = --m_nRefCount;
     if (refCnt > 0)
       return;
     delete this;
   }
   void AddRef() {
-    CryInterlockedIncrement(&m_nRefCount);
+	// sfink
+    // CryInterlockedIncrement(&m_nRefCount);
+	  ++m_nRefCount;
   }
 
 	STexAnim()

@@ -258,11 +258,15 @@ public:
 
 	inline int AddRef()
 	{
-		return CryInterlockedIncrement(&m_cnt);
+		// sfink
+		// return CryInterlockedIncrement(&m_cnt);
+		return ++m_cnt;
 	}
 	inline int Release()
 	{
-		const int nCount = CryInterlockedDecrement(&m_cnt);
+		// sfink
+		// const int nCount = CryInterlockedDecrement(&m_cnt);
+		const int nCount = --m_cnt;
 		assert(nCount >= 0);
 		if (nCount == 0)
 		{

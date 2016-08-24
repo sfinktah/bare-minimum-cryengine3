@@ -289,7 +289,8 @@ struct Node_Allocator<eCryLinuxMalloc>
 };
 #endif // LINUX64
 
-#include "MultiThread.h"
+// sfink
+// #include "MultiThread.h"
 
 //#ifdef PS3
 //#define USE_WRITELOCKS
@@ -312,7 +313,8 @@ struct InternalCriticalSectionDummy {
 
 inline void CryInternalCreateCriticalSection(void * pCS)
 {
-	CryCreateCriticalSectionInplace(pCS);
+// sfink
+//	CryCreateCriticalSectionInplace(pCS);
 }
 
 
@@ -402,7 +404,9 @@ public:
 			m_bInitialized = false;
 			for (int i = 0; i < sizeof(g_globalSections) / sizeof(g_globalSections[0]); ++i) {
 				if (&g_globalSections[i])
-					CryDeleteCriticalSectionInplace(&g_globalSections[i]);
+					// sfink
+					// CryDeleteCriticalSectionInplace(&g_globalSections[i]);
+						delete &g_globalSections[i];
 			}
 
 			memset(&g_globalSections[0], 0, sizeof(g_globalSections));
@@ -496,6 +500,7 @@ public:
 // A class that forward node allocator calls directly to CRT
 struct cry_crt_node_allocator
 {
+#pragma warning(disable: 4245)
 	static const size_t MaxSize = ~0;
 
 	static void *alloc(size_t __n)

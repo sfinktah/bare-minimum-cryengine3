@@ -1431,6 +1431,7 @@ inline bool CCamera::IsAABBVisible_EM( const AABB& aabb ) const
 //  true - not visible
 inline bool CCamera::IsAABBVisible_FM( const AABB& aabb ) const
 {
+#pragma warning(disable: 4302)
 	PrefetchLine( &aabb, sizeof(AABB) );
 
   if(!m_pMultiCamera) // use main camera

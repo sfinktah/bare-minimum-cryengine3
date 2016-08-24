@@ -18,7 +18,7 @@
 #define __CryString_h__
 #pragma once
 
-#include <string.h>
+// #include <string.h>
 #include <wchar.h>
 #include <limits.h>
 #include <stdarg.h>

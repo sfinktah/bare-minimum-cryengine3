@@ -55,7 +55,7 @@ struct INetwork;
 struct ICryFont;
 struct IMovieSystem;
 struct IPhysicalWorld;
-struct IMemoryManager;
+// struct IMemoryManager;
 struct ISoundSystem;
 struct IMusicSystem;
 struct IFrameProfileSystem;
@@ -1018,7 +1018,7 @@ UNIQUE_IFACE struct ISystem
 	virtual ICryPak *GetIPak()	= 0;
 	virtual ICryFont *GetICryFont()	= 0;
 	virtual IEntitySystem *GetIEntitySystem() = 0;
-	virtual IMemoryManager *GetIMemoryManager() = 0;
+//	virtual IMemoryManager *GetIMemoryManager() = 0;
 	virtual IAISystem *GetAISystem() = 0;
 	virtual IMovieSystem *GetIMovieSystem() = 0;
 	virtual IPhysicalWorld *GetIPhysicalWorld() = 0;

@@ -23,9 +23,11 @@ History:
 
 #if defined(_DEBUG) || defined(FORCE_ASSERTS_IN_PROFILE)
 #undef USE_CRY_ASSERT
-#define USE_CRY_ASSERT
+// sfink
+// #define USE_CRY_ASSERT
 #endif
 
+#define FORCE_STANDARD_ASSERT
 #if defined(FORCE_STANDARD_ASSERT)
 #undef USE_CRY_ASSERT
 #endif

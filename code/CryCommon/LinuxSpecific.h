@@ -114,6 +114,8 @@ typedef float FLOAT;
 #define LOBYTE(w)           ((BYTE)((DWORD_PTR)(w) & 0xff))
 #define HIBYTE(w)           ((BYTE)((DWORD_PTR)(w) >> 8))
 
+#pragma error("WTF ARE YOU DOING MR THIS DOESN'T FKN RUN ON LINUX")
+#error "GTFO"
 #define CALLBACK
 #define WINAPI
 

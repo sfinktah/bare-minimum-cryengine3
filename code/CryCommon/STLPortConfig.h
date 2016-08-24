@@ -24,12 +24,15 @@
 #endif
 
 // Microsoft Debug STL turned off so we can use intermixed debug/release versions of DLL.
+// sfink
+#ifdef SFINK_SAY_STOP_FUCKING_WITH_SHIT
 #undef _HAS_ITERATOR_DEBUGGING
 #define _HAS_ITERATOR_DEBUGGING 0
 #undef _SECURE_SCL
 #define _SECURE_SCL 0
 #undef _SECURE_SCL_THROWS
 #define _SECURE_SCL_THROWS 0
+#endif
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -101,9 +104,10 @@ extern "C" {
 }
 #endif
 
-#undef WINAPI
-#undef DECLSPEC_IMPORT
-#undef WINBASEAPI
+// #error "WTF WILLIS"
+// #undef WINAPI
+// #undef DECLSPEC_IMPORT
+// #undef WINBASEAPI
 
 # endif //_XBOX_VER else _WIN32
 #endif // _DEBUG && !PS3 && !__SPU__

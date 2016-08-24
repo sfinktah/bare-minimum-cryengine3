@@ -1,4 +1,7 @@
- 
+#ifndef __CREOCCLUSIONQUERY_H__
+#define __CREOCCLUSIONQUERY_H__
+#endif
+
 #ifndef __CREOCCLUSIONQUERY_H__
 #define __CREOCCLUSIONQUERY_H__
 

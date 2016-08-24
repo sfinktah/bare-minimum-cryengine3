@@ -16,7 +16,7 @@
 #pragma once
 
 #if defined(WIN32) && !defined(_RELEASE)
-#pragma optimize( "y", off ) // Generate frame pointers on the program stack. (Disable Omit Frame Pointers optimization, call stack unwinding cannot work with it)
+// #pragma optimize( "y", off ) // Generate frame pointers on the program stack. (Disable Omit Frame Pointers optimization, call stack unwinding cannot work with it)
 #endif
 
 // Disable (and enable) specific compiler warnings.
