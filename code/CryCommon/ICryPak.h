@@ -402,7 +402,7 @@ UNIQUE_IFACE struct ICryPak
 	// mode x is a direct access mode, when used file reads will go directly into the low level file system without any internal data caching.
 	// Text mode is not supported for files in PAKs.
 	// for nFlags @see ICryPak::EFOpenFlags
-  virtual FILE *FOpen(const char *pName, const char *mode, unsigned nFlags = 0)=0;
+	virtual FILE *FOpen(const char *pName, const char *mode, unsigned nFlags = 0) = 0;
 	virtual FILE *FOpen(const char *pName, const char *mode,char *szFileGamePath,int nLen)=0;
 
 	// Just wrapper for fopen function. For loading sampler unification
