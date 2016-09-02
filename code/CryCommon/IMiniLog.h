@@ -37,7 +37,7 @@ struct IMiniLog
 
 	// Notes:
 	//	 You only have to implement this function.
-	virtual void LogV (const ELogType nType, const char* szFormat, va_list args) PRINTF_PARAMS(3, 0) = 0;
+	virtual void LogV (const ELogType nType, const char* szFormat, ...) = 0;
 	
 	// Summary:
 	//	 Logs using type.
@@ -106,7 +106,7 @@ struct CNullMiniLog: public IMiniLog
 	//	 The default implementation just won't do anything
 	//##@{
 	void LogV(const char* szFormat, va_list args) {}
-	void LogV(const ELogType nType, const char* szFormat, va_list args) {}
+	void LogV(const ELogType nType, const char* szFormat, ...) {}
 	//##@}
 };
 
