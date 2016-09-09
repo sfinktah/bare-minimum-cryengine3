@@ -1,3 +1,0 @@
-local Behavior = CreateAIBehavior("RacerIdle",
-{
-});
