@@ -414,6 +414,7 @@ void __cdecl operator delete[](void *p)
 #ifndef MEMMAN_STATIC
 IMemoryManager *CryGetIMemoryManager()
 {
+#error Included
 	static IMemoryManager* memMan = 0;
 	if (!memMan)
 		memMan = _CryMemoryManagerPoolHelper::GetIMemoryManager();

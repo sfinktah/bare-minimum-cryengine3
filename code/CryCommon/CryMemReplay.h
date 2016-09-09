@@ -169,18 +169,19 @@ struct IMemReplay
 #if CAPTURE_REPLAY_LOG
 inline IMemReplay* CryGetIMemReplay()
 {
-	static CDummyMemReplay s_dummyMemReplay;
-	static IMemReplay *s_pMemReplay = 0;
-	if (!s_pMemReplay)
-	{
-		// get it from System		
-		IMemoryManager* pMemMan = CryGetIMemoryManager();
-		if (pMemMan)
-			s_pMemReplay = pMemMan->GetIMemReplay();
-		if (!s_pMemReplay)
-			return &s_dummyMemReplay;
-	}
-	return s_pMemReplay;
+	return 0;
+	//static CDummyMemReplay s_dummyMemReplay;
+	//static IMemReplay *s_pMemReplay = 0;
+	//if (!s_pMemReplay)
+	//{
+	//	// get it from System		
+	//	IMemoryManager* pMemMan = CryGetIMemoryManager();
+	//	if (pMemMan)
+	//		s_pMemReplay = pMemMan->GetIMemReplay();
+	//	if (!s_pMemReplay)
+	//		return &s_dummyMemReplay;
+	//}
+	//return s_pMemReplay;
 }
 #else
 inline IMemReplay* CryGetIMemReplay()

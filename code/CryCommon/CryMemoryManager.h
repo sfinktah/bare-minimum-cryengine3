@@ -197,14 +197,18 @@ inline IMemoryManager* CryGetIMemoryManager()
 	return &g_memoryManager;
 }
 #else
-IMemoryManager *CryGetIMemoryManager();
+// IMemoryManager *CryGetIMemoryManager();
 #endif
 
 class STraceHeapAllocatorAutoColor
 {
 public:
-	explicit STraceHeapAllocatorAutoColor( uint32 color ) { m_color = CryGetIMemoryManager()->TraceHeapGetColor(); CryGetIMemoryManager()->TraceHeapSetColor(color); }
-	~STraceHeapAllocatorAutoColor() { CryGetIMemoryManager()->TraceHeapSetColor(m_color); };
+	explicit STraceHeapAllocatorAutoColor( uint32 color ) { 
+		//m_color = CryGetIMemoryManager()->TraceHeapGetColor(); CryGetIMemoryManager()->TraceHeapSetColor(color); 
+	}
+	~STraceHeapAllocatorAutoColor() {
+		//CryGetIMemoryManager()->TraceHeapSetColor(m_color); 
+	};
 protected:
 	uint32 m_color;
 	STraceHeapAllocatorAutoColor() {};
